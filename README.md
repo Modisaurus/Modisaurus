@@ -1,14 +1,4 @@
-# Tutorial Repository
-Welcome to this tutorial repository! (I really need a different name for this thing.) This README should give you everything you need to setup your own repository on GitHub or any other web-hoster you hold! For the sake of time and money, I'll be using GitHub for this tutorial, because you know, well, it's free.
-
-## Prerequisites
-* Linux. Sorry boys, but Cydia runs off of Debian packages (.deb) and the quickest and most efficient way to make these is with a Debian-based Linux installation, such as [Ubuntu](http://ubuntu.com) or [Debian](http://debian.org) itself. But, don't worry, Linux is free! #linuxmasterrace
-* Git version 1.7 or higher. (This is only required if you are pushing your repository to a git-based system, such as GitHub, which will be used in this tutorial.) To install this with your average Debian-based Linux distribution, type the command `sudo apt-get install git` in a terminal window.
-
-## Installation
-1. Download the zip file [here](https://github.com/WinneonSword/tutorial-repository/archive/master.zip) and extract it to the location of your choice or open up your favourite terminal with Git installed and type in the command `git clone https://github.com/WinneonSword/tutorial-repository.git repo`! This will create the the folder at the location you specified in your terminal with all of this repository's contents inside.
-2. ????
-3. Hold on, no profit for you yet.
+# How to make debian files in a repo
 
 ## How It Works
 Okay, so now you've downloaded the thing and it's a folder with a bunch of random files in it that make absolutely no sense whatsoever. Now what?! Here's what. You see you unroll it, then you stick it i&mdash; whoops.
