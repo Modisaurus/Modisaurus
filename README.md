@@ -15,13 +15,16 @@ The folder marked `var` is where you want your files for your tweak or theme to 
 The control file is made up of several fields. I'm going to cover the main ones you will be using. Inside the package folder, which in this case, is called `Package` (I'm no longer inside the example .deb file anymore if you didn't know.), is a `DEBIAN` folder, and inside that is the control file. Crack this puppy open, and you will see several fields. The fields you see should look similar to the ones below.
 
 ```markdown
-Package: net.winneonsword.package
+Package: com.yourreponame.package
 Name: Test Package
 Version: 1.0
 Architecture: iphoneos-arm
 Description: This is a test package from /u/WinneonSword's tutorial repository!
-Depiction: http://repo.winneonsword.net/packages/package.html
-Homepage: http://repo.winneonsword.net
+Depends: firmware (>= 8.0), com.fortysixandtwo.alkaline, org.coolstar.customclock, com.groovycarrot.sbhtml, com.unlimapps.toneenabler, com.unlimapps.uaunbox, com.matchstic.infostats, com.codethemed.iconbundles, com.evilgoldfish.lockglyph, winterboard
+Conflicts: com.anotherrepo.package
+Replaces: com.anotherrepo.packagethatisthesame
+Depiction: http://repo.yourreponame.com/packages/package.html
+Homepage: http://repo.yourreponame.com
 Maintainer: Jesse Bryan <winneonsword@gmail.com>
 Author: Jesse Bryan <winneonsword@gmail.com>
 Section: Themes
@@ -33,6 +36,9 @@ Let's go down the line and explain what each one means.
 * **Name:** This is what will show as the name when you are looking at your package in Cydia. You know, the big bold text that is the main attraction.
 * **Version:** This is the version of your package. Versioning is something to get into the habit of. The way I do it though, is if it is a initial release, then it obviously is version 1.0. If it is a minor change, then I add a number to the 3rd digit, which in this case would turn into 1.0.1. If it was a major change, then I would add a number to the 2rd digit and remove the 3rd, which would turn into 1.1. Get it?
 * **Architecture:** This is the type of the package. **Don't change this.**
+* **Depends:** This is where you list the prerequisites of the package, this includes other packages that need to be installed alongside it, as well as ios firmware type.
+* **Conflicts** This is where you list the conflicts of the package, this includes other packages that cause or have known issues with your tweak, the user will be prompted to uninstall them when queuing your package.
+* **Replaces:** This is where you list the other packages that this one replaces, this includes other packages with older version that have a different bundle id or are in another repo.
 * **Description:** This is the description of your package. This text section will appear under entries in Cydia in a list view, or if there is no depiction for the file (below), when viewing the package itself in the dotted-line division area.
 * **Depiction:** This is the webpage that pops up when viewing the package itself in Cydia. This part is optional, and should only be used if you know what you are doing around mobile web development. Keep in mind, that if you have a depication specified, the description of the package will *not* show up when viewing the package directly in Cydia.
 * **Homepage:** This part is pretty obvious; it's the package's homepage, or mainly your website's homepage.
@@ -69,4 +75,4 @@ This is reaching the end of this tutorial, so now to conclude the repository mak
 ## Conclusion
 Thank you for listening for my ongoing blabber about Debian and how things work. This method is how you would get an actual repository up and running without using myrepospace or any similar service. This method also allows full control over all of your packages to your hearts content, and it allows a neat and clean way to redirect the web address to your custom domain of your choice, using GitHub's CNAME system. (I will not be going into that in this tutorial. Sorry!) I hope you enjoyed this tutorial, and farewell!
 
-&mdash; /u/WinneonSword
+&mdash; /u/WinneonSword and edits by Modisaurus
